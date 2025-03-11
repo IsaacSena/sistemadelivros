@@ -40,5 +40,20 @@
                    "<br>Preço Unitário: "."R$".$this->precoUnit." Reais";
         }
         
+        public function validarLivros(int $codigo, string $titulo, string $autor, string $categoria, string $editora, int $quantidade):mixed{
+            if ($this->codigo != int || $this->titulo != "" || $this->autor != "" || $this->categoria != "" || $this->editora != "" ||$this->quantidade != 10 || && $this->precoUnit != 10) {
+                return "<br>algo está errado";
+            }else {
+                "<br>Código: ".$this->codigo.
+                   "<br>Título: ".$this->titulo.
+                   "<br>Autor: ".$this->autor.
+                   "<br>Categoria: ".$this->categoria.
+                   "<br>Editora: ".$this->editora.
+                   "<br>Quantidade: ".$this->quantidade.
+                   "<br>Preço Unitário: "."R$".$this->precoUnit." Reais";
+            }
+        }
+     
+        
     }
 ?>

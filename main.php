@@ -12,26 +12,38 @@
     use PHP\Modelo\Cadastrolivros;
     use PHP\Modelo\Formapagamento;
 
-    $cartao1 = new Cartao('131231313','213121','1234');
+    $cartao1 = new Cartao(1234,5678,91011);
+
     
     $cliente1 = new Cliente('Isaac','Rua Vicente','11960172522','17/04/02',
     'bankaiminazuki','urahara',$cartao1);
 
-    $livro1 = new Cadastrolivros(1,'As Aventuras','Mateus','Aventura','Pavanis',49,10);
+    $livro1 = new Cadastrolivros(2,'As Aventuras','Mateus','Aventura','Pavanis',49,10);
 
     $pagamento1 = new Formapagamento('Crédito á vista');
 
     $compra1 = new Compra(1,$cliente1,$livro1,$pagamento1);
 
 
+
     echo "<br><br>".$cliente1->imprimir(); 
-    echo "<br><br>".$cartao1->imprimir();
-    echo "<br><br>".$livro1->imprimir();
+    
+    
+
+    echo "<br><br>".$cartao1->validarCartao(1234,5678,91011);
+
+
+    echo "<br><br>".$livro1->validarLivros(1,'As Aventuras','Mateus','Aventura','Pavanis',49,10);
+
+
+
     echo "<br><br>".$pagamento1->imprimir();
+
+
     echo "<br><br>".$compra1->imprimir();
 
+
     
-    echo "<br><br>Querido professor, gostaria que o senhor soubesse que me dediquei ao máximo, usei todos os meus neurônios, mas infelizmente não sou inteligente o suficiente para a programação. Obrigado pela aula. Deus te abençoe. Amém."
    
     
     
